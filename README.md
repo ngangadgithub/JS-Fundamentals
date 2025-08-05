@@ -1,1 +1,1 @@
-Write a script that prints “JavaScript is amazing”:
+Learning Javascript is fun
