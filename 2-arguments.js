@@ -1,11 +1,16 @@
+const process=require('node:process');
 
+process.on('beforeExit', (code) =>{
+  console.log('Argument found:', code);
+  });
 
-const args = process.argv.slice(2);
+  process.on('exit', (code) => {
+    console.log('Arguments found:', code);
+  });
 
-if (args.length === 0) {
-  console.log("No argument");
-} else if (args.length === 1) {
-  console.log("Argument found");
-} else {
-  console.log("Arguments found");
-}
+  console.log('No argument:');
+  
+  //Print 
+  //No argument
+  //Argument found
+//Arguments found
