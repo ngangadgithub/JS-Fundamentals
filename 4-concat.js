@@ -1,5 +1,16 @@
-let str1 = "C is cool";
-let str2 = "C is undefined";
-let str3= "Undefined is undefined";
-let result = str1.concat(str2,str3);
-console.log(result); // "C is cool" // "C is undefined" //"Undefined is undefined"
+const process = require('node:process');
+
+process.on('beforeExit', (code) => {
+    console.log('C is undefined:' ,code);
+    });
+
+    process.on('exit', (code) => {
+        console.log('Undefined is undefined:' ,code)
+    });
+
+    console.log('C is cool.');
+
+    //Prints:
+    //C is cool
+    //C is undefined
+    //Undefined is undefined
